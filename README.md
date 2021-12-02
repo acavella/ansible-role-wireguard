@@ -40,7 +40,7 @@ None.
 
 ## License
 
-GNU GENERAL PUBLIC LICENSE v3.0
+GNU General Public License v3.0
 
 ## Author Information
 
