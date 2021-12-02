@@ -1,5 +1,6 @@
 # Ansible Role: Wireguard
 
+[![CI](https://github.com/acavella/ansible-role-wireguard/workflows/CI/badge.svg?event=push)](https://github.com/acavella/ansible-role-wireguard/actions?query=workflow%3ACI)
 ![GitHub last commit](https://img.shields.io/github/last-commit/acavella/ansible-role-wireguard)
 ![GitHub repo size](https://img.shields.io/github/repo-size/acavella/ansible-role-wireguard)
 
