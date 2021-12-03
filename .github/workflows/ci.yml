@@ -7,7 +7,6 @@ name: CI
       - master
   schedule:
     - cron: "30 5 * * 4"
-  workflow_dispatch:
 
 defaults:
   run:
