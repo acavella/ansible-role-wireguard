@@ -9,4 +9,5 @@ rules:
 ignore: |
   .github/stale.yml
   .github/workflows/ci.yml
-  .travis.yml
+  .anisble-lint
+  .yamllint
