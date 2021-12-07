@@ -14,23 +14,14 @@ N/A
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    public_ethernet_interface: eth0 # Set to the public facing ethernet adapter   
+    public_ethernet_interface: eth0
 
-Version, platform, and architecture to use when downloading Go.
+Private and public keys used to define initial server and client configurations.
 
     server_private_key_encoded:  set to generated wireguard server private key, base64 encoded.
     client_public_key_encoded:   set to generated wireguard client public key, base64 encoded.
     server_private_key_decoded:  base64 decoded version of above key, used in wg0.conf.j2
     client_public_key_decoded:   base64 decoded version of above key, used in wg0.conf.j2
-
-    wg_tarball: wg{{ wg_version }}.{{ wg_platform }}-{{ wg_arch }}.tar.gz
-    wg_download_url: https://dl.google.com/wg/{{ wg_tarball }}
-
-These two variables are used to build the download URL when installing Go.
-
-    wg_checksum: '550f9845451c0c94be679faf116291e7807a8d78b43149f9506c1b15eb89008c'
-
-SHA256 checksum of the Go download. If changing the version, platform, or architecture, you will also need to update this checksum, too.
 
 ## Dependencies
 
@@ -40,7 +31,7 @@ None.
 
     - hosts: myserver
       roles:
-        - { role: geerlingguy.go }
+        - { role: acavella.wireguard }
 
 ## License
 
