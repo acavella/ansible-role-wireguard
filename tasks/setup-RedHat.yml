@@ -1,6 +1,6 @@
 ---
 - name: Install dependencies
-  apt:
+  yum:
     name: 
       - iptables
       - wireguard
