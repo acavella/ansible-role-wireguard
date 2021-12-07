@@ -1,7 +1,7 @@
 ---
 - name: Install dependencies
   apt:
-    name: 
+    name:
       - iptables
       - wireguard
     state: latest
