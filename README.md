@@ -14,9 +14,10 @@ N/A
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    wg_version: "1.17.3"
-    wg_platform: linux
-    wg_arch: amd64
+    server_private_key_encoded: set to generated wireguard server private key, base64 encoded.
+    client_public_key_encoded: set to generated wireguard client public key, base64 encoded.
+    server_private_key_decoded: base64 decoded version of above key, used in wg0.conf.j2
+    client_public_key_decoded: base64 decoded version of above key, used in wg0.conf.j2
 
 Version, platform, and architecture to use when downloading Go.
 
