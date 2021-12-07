@@ -14,12 +14,14 @@ N/A
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
+    public_ethernet_interface: eth0 # Set to the public facing ethernet adapter   
+
+Version, platform, and architecture to use when downloading Go.
+
     server_private_key_encoded:  set to generated wireguard server private key, base64 encoded.
     client_public_key_encoded:   set to generated wireguard client public key, base64 encoded.
     server_private_key_decoded:  base64 decoded version of above key, used in wg0.conf.j2
     client_public_key_decoded:   base64 decoded version of above key, used in wg0.conf.j2
-
-Version, platform, and architecture to use when downloading Go.
 
     wg_tarball: wg{{ wg_version }}.{{ wg_platform }}-{{ wg_arch }}.tar.gz
     wg_download_url: https://dl.google.com/wg/{{ wg_tarball }}
