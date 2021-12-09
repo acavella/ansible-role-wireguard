@@ -6,6 +6,8 @@
 
 An Ansible Role that installs and configures Wireguard on Linux.
 
+12/9/21: Version 0.9.1 temporarily removes support for CentOS and Fedora.  
+
 ## Requirements
 
 N/A
