@@ -1,7 +1,0 @@
----
-- name: Install dependencies
-  yum:
-    name:
-      - iptables
-      - wireguard
-    state: latest
