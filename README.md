@@ -41,8 +41,8 @@ None.
 
 ```yaml
 - hosts: myserver
-  roles:
-    - { role: acavella.wireguard }
+    roles:
+      - { role: acavella.wireguard }
 ```
 ## License
 
