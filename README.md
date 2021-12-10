@@ -16,11 +16,13 @@ N/A
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    # Public ethernet adapter
-    public_ethernet_interface: eth0
+```yaml
+# Public ethernet adapter
+public_ethernet_interface: eth0
 
-    # Port that must be accessible via public
-    wireguard_port: 51820
+# Port that must be accessible via public
+wireguard_port: 51820
+```
 
 Private and public keys used to define initial server and client configurations.
 
