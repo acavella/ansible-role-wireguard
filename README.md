@@ -26,10 +26,12 @@ wireguard_port: 51820
 
 Private and public keys used to define initial server and client configurations.
 
-    server_private_key_encoded:  set to generated wireguard server private key, base64 encoded.
-    client_public_key_encoded:   set to generated wireguard client public key, base64 encoded.
-    server_private_key_decoded:  base64 decoded version of above key, used in wg0.conf.j2
-    client_public_key_decoded:   base64 decoded version of above key, used in wg0.conf.j2
+```yaml
+server_private_key_encoded:  set to generated wireguard server private key, base64 encoded.
+client_public_key_encoded:   set to generated wireguard client public key, base64 encoded.
+server_private_key_decoded:  base64 decoded version of above key, used in wg0.conf.j2
+client_public_key_decoded:   base64 decoded version of above key, used in wg0.conf.j2
+```
 
 ## Dependencies
 
@@ -37,10 +39,11 @@ None.
 
 ## Example Playbook
 
-    - hosts: myserver
-      roles:
-        - { role: acavella.wireguard }
-
+```yaml
+- hosts: myserver
+  roles:
+    - { role: acavella.wireguard }
+```
 ## License
 
 GNU General Public License v3.0
