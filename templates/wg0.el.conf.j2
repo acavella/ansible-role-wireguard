@@ -1,0 +1,12 @@
+[Interface]
+Address = 10.253.3.1/24
+SaveConfig = true
+PrivateKey = {{ server_private_key }}
+ListenPort = {{ wireguard_port }}
+
+PostUp = firewall-cmd --add-port={{ wireguard_port }}/udp; firewall-cmd --zone=public --add-masquerade; firewall-cmd --direct --add-rule ipv4 filter FORWARD 0 -i wg0 -o {{ public_ethernet_interface }} -j ACCEPT; firewall-cmd --direct --add-rule ipv4 nat POSTROUTING 0 -o {{ public_ethernet_interface }} -j MASQUERADE
+PostDown = firewall-cmd --remove-port={{ wireguard_port }}/udp; firewall-cmd --zone=public --remove-masquerade; firewall-cmd --direct --remove-rule ipv4 filter FORWARD 0 -i wg0 -o {{ public_ethernet_interface }} -j ACCEPT; firewall-cmd --direct --remove-rule ipv4 nat POSTROUTING 0 -o {{ public_ethernet_interface }} -j MASQUERADE
+
+[Peer]
+PublicKey = {{ client_public_key }}
+AllowedIPs = 10.253.3.2/32
